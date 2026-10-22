@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+header {
+    background-color: black;
+    margin-bottom: 10px;
+    color: white;
+    padding:5px;
+}
+
+footer{
+    background-color: gray;
+    margin-top: 20px;
+    padding:5px;
+}
+
+.logotipo {    
+    width:200px;
+}

@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col">
+        <!--Adição do [(ngModel)] e o evento (ngModelChange) para salvar automaticamente ao digitar-->
+        <input
+          type="text"
+          name="txtBusca"
+          [(ngModel)]="termoBusca"
+          (ngModelChange)="salvarNoLocalStorage()"
+          placeholder="busca"
+          class="form-control"
+        >
+    </div>
+    <div class="col">
+        <button (click)="salvarNoLocalStorage()" class="btn btn-warning">ok</button>
+    </div>
+</div>
