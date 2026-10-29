@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-6 card">
+        <img src="{{obj.codigo}}.jpg" class="card-img-top w-50">
+    </div>    
+    <div class="col-6 card">
+        <h5 class="card-title">{{obj.nome}}</h5>        
+        <div class="card-body" >
+            <div class="card-text">{{obj.descritivo}}</div>
+            <div *ngIf="obj.valorPromo>0">
+                de: <s>{{obj.valor | currency:'BRL'}}</s><br>
+                por: {{obj.valorPromo | currency:'BRL'}}<br><br>      
+            </div>
+            <div *ngIf="obj.valorPromo==0">
+                por: {{obj.valor | currency:'BRL'}}<br>                
+            </div>
+            <button class="btn btn-outline-success w-50" *ngIf="obj.quantidade>0"
+                (click)="comprar(obj);">
+                comprar</button>
+            <h4 *ngIf="obj.quantidade==0">Sem Estoque</h4>    
+    </div>            
+</div>                

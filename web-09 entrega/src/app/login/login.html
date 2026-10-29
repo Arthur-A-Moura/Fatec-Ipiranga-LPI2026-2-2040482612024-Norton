@@ -1,0 +1,16 @@
+<h3>Faça seu login</h3>
+<div class="alert alert-danger" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<div class="row">
+    <div class="col">
+        preencha seus dados abaixo:<br>
+        <label>email:</label><input type="email" name="txtEmail" [(ngModel)]="obj.email" class="form-control"><br>
+        <label>senha:</label><input type="password" name="txtSenha" [(ngModel)]="obj.senha" class="form-control"><br>
+        <button class="btn btn-success w-50" (click)="fazerLogin();">entrar</button>
+    </div>
+    <div class="col">
+        ainda não tem cadastro: <br><a href="cadastro" 
+        class="btn btn-info w-50">novo cadastro</a><br>
+        <br>esqueceu sua senha: <br><a href="esqueceu" 
+        class="btn btn-warning w-50">reenvio de senha</a>
+    </div>
+</div>

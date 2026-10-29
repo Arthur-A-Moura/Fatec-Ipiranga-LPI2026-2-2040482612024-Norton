@@ -1,0 +1,23 @@
+<div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<div class="row">
+    <div class="card col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-3"        
+        *ngFor="let obj of lista">
+        <img src="{{obj.codigo}}.jpg" class="card-img-top h-50">
+        <h5 class="card-title">{{obj.nome}}</h5>
+        <div class="card-body" >
+            <div *ngIf="obj.valorPromo>0">
+                de: <s>{{obj.valor | currency:'BRL'}}</s><br>
+                por: {{obj.valorPromo | currency:'BRL'}}<br><br>      
+            </div>
+            <div *ngIf="obj.valorPromo==0">
+                por: {{obj.valor | currency:'BRL'}}<br>                
+            </div>
+            <button class="btn btn-outline-info w-50" (click)="verDetalhe(obj);">ver +</button>
+            <button class="btn btn-outline-success w-50" *ngIf="obj.quantidade>0"
+                (click)="comprar(obj);"> comprar</button>
+        </div>
+    </div>
+
+
+
+ </div>   

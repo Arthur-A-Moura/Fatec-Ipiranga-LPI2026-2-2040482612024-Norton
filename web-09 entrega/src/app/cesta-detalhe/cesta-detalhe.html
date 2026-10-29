@@ -1,0 +1,39 @@
+<h3>Cesta</h3>
+<div class="alert alert-warning" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<br>
+<table class="table table-hover">
+    <thead>
+        <tr>
+        <td></td>
+        <td>Produto</td>
+        <td>Quantidade</td>
+        <td>Valor</td>
+        <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of cesta.itens">
+            <td><img src="{{obj.produto.codigo}}.jpg" class="w-25"></td>
+            <td><b>{{obj.produto.nome}}</b><br>{{obj.produto.descritivo}}</td>
+            <td>{{obj.qtd}}</td>
+            <td>{{obj.valorTotal| currency:'BRL'}}</td>
+            <td>
+    <button class="btn btn-danger" (click)="remover(obj.produto.codigo)">
+        X
+    </button>
+</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3"><b>total</b></td>
+            <td class="fw-bold">{{cesta.total | currency:'BRL'}}</td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<button class="btn btn-outline-danger" (click)="limpar();">limpar cesta</button>&nbsp;
+<button  class="btn btn-outline-info">continuar comprando</button>&nbsp; 
+<button  class="btn btn-outline-success">gravar pedido</button>&nbsp;
+

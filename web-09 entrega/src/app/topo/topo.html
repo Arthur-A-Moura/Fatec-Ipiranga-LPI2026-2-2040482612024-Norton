@@ -1,0 +1,19 @@
+<header class="bg-dark text-light">
+    <div class="row">
+    <div class="col">
+        <img src="logotipo.jpg" class="w-25"><br>
+    </div>
+        <div class="col">
+            <app-barra-busca></app-barra-busca><br>
+            <nav class="btn-group">
+                <a href="login"  class="btn btn-secondary">meu cadastro</a> 
+                <a href="pedidos"  class="btn btn-secondary">meus pedidos</a> 
+                <a href="promo"  class="btn btn-secondary">promoções</a> 
+                <a href="cesta"  class="btn btn-secondary">carrinho</a>
+            </nav>
+
+            <button (click)="sair();" class="btn btn-danger">sair</button>
+        </div>
+    </div>
+</header>
+{{mensagem}}

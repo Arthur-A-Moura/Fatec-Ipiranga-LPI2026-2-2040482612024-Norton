@@ -1,0 +1,33 @@
+<h3>Cadastro</h3>
+<div class="alert alert-success" *ngIf="mensagem.length>0">{{mensagem}}</div>
+<form class="was-validated">
+    <label class="form-label">nome:</label>
+    <input type="text" name="txtNome" [(ngModel)]="obj.nome" class="form-control" required>
+    <div class="invalid-feedback">Nome é obrigatório!</div>
+
+    <label class="form-label">documento:</label>
+    <input type="text" name="txtDocumento" [(ngModel)]="obj.documento"  class="form-control" required>
+    <div class="invalid-feedback">Documento é obrigatório!</div>
+
+    <label class="form-label">e-mail:</label>
+    <input type="email" name="txtEmail" [(ngModel)]="obj.email" class="form-control" required>
+    <div class="invalid-feedback">email é obrigatório!</div>
+
+    <label class="form-label">senha:</label>
+    <input type="password" name="txtSenha" [(ngModel)]="obj.senha" class="form-control" required
+    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+    <div class="invalid-feedback">A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial (@$!%*?&).</div>
+
+    <label class="form-label">telefone:</label>
+    <input type="text" name="txtTelefone" [(ngModel)]="obj.telefone" class="form-control" required 
+    pattern="[0-9]{4,5}-[0-9]{4}">
+    <div class="invalid-feedback">Informe um telefone valido!</div>
+
+    <label class="form-label">endereço:</label>
+    <textarea name="txtLogradouro" [(ngModel)]="obj.logradouro" 
+    class="form-control" required rows="5"></textarea>
+    <div class="invalid-feedback">Informe um endereço completo!</div>
+
+    <br><button class="btn btn-success w-100" (click)="gravar();">gravar</button>
+
+</form>
