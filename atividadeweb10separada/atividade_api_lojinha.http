@@ -1,0 +1,188 @@
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Camiseta Palmeiras",
+  "descritivo": "Camiseta oficial verde",
+  "valor": 199.90,
+  "valorPromo": 179.90,
+  "quantidade": 15,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Camiseta Brasil",
+  "descritivo": "Camiseta selecao brasileira",
+  "valor": 189.90,
+  "valorPromo": 169.90,
+  "quantidade": 20,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Bone Esportivo",
+  "descritivo": "Bone preto ajustavel",
+  "valor": 79.90,
+  "valorPromo": 69.90,
+  "quantidade": 12,
+  "destaque": 0
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Bola de Futebol",
+  "descritivo": "Bola tamanho oficial",
+  "valor": 149.90,
+  "valorPromo": 129.90,
+  "quantidade": 10,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Meiao Verde",
+  "descritivo": "Meiao esportivo",
+  "valor": 39.90,
+  "valorPromo": 34.90,
+  "quantidade": 30,
+  "destaque": 0
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Short Esportivo",
+  "descritivo": "Short para treino",
+  "valor": 99.90,
+  "valorPromo": 89.90,
+  "quantidade": 18,
+  "destaque": 0
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Chuteira Society",
+  "descritivo": "Chuteira para campo society",
+  "valor": 249.90,
+  "valorPromo": 219.90,
+  "quantidade": 8,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Garrafa Esportiva",
+  "descritivo": "Garrafa de 750ml",
+  "valor": 49.90,
+  "valorPromo": 44.90,
+  "quantidade": 25,
+  "destaque": 0
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Mochila Esportiva",
+  "descritivo": "Mochila para treino",
+  "valor": 159.90,
+  "valorPromo": 139.90,
+  "quantidade": 10,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/produto
+Content-Type: application/json
+
+{
+  "nome": "Jaqueta Esportiva",
+  "descritivo": "Jaqueta para treino",
+  "valor": 299.90,
+  "valorPromo": 269.90,
+  "quantidade": 7,
+  "destaque": 1
+}
+
+###
+
+POST http://localhost:8081/api/cliente
+Content-Type: application/json
+
+{
+  "nome": "Joao Silva",
+  "telefone": "11999999999",
+  "documento": "12345678901",
+  "senha": "123456",
+  "logradouro": "Rua das Flores, 100",
+  "email": "joao@email.com",
+  "ativo": 1
+}
+
+###
+
+POST http://localhost:8081/api/cliente
+Content-Type: application/json
+
+{
+  "nome": "Maria Souza",
+  "telefone": "11988888888",
+  "documento": "98765432100",
+  "senha": "654321",
+  "logradouro": "Av. Paulista, 500",
+  "email": "maria@email.com",
+  "ativo": 1
+}
+
+###
+
+PUT http://localhost:8081/api/cliente
+Content-Type: application/json
+
+{
+  "codigo": 1,
+  "nome": "Joao da Silva",
+  "telefone": "11977777777",
+  "documento": "12345678901",
+  "senha": "123456",
+  "logradouro": "Rua Nova, 250",
+  "email": "joao@email.com",
+  "ativo": 1
+}
+
+
+###
+
+GET http://localhost:8081/api/produtos
